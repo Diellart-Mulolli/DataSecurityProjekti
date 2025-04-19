@@ -38,3 +38,7 @@ def main():
             if not textArr:
                 print("ERROR: Invalid characters in text. Use only letters.")
                 continue
+            textIntArr = enumerate_chars(textArr) #enumerate_chars function also will be completed later by the colleague
+            input_key = uppercased(input("Enter key:").strip())
+            keyArr = charrify(input_key)
+
