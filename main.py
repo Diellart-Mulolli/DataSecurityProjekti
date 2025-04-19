@@ -41,4 +41,7 @@ def main():
             textIntArr = enumerate_chars(textArr) #enumerate_chars function also will be completed later by the colleague
             input_key = uppercased(input("Enter key:").strip())
             keyArr = charrify(input_key)
-
+            if not keyArr: 
+                print("ERROR: Invalid characters in key. Use only letters.")
+                continue
+            keyIntArr = enumerate_chars(keyArr)
