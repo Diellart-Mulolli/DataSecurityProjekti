@@ -1,5 +1,8 @@
 import string 
 
+def uppercased(text):
+    return text upper()
+
 def denumerate(indices):
     alphabet = string.ascii_uppercase
     return [alphabet[i] for i in indices]
@@ -23,3 +26,4 @@ def key_resize(key, size):
 def coded(text, key):
     n = len(string.ascii_uppercase)
     return [(2 * n - text[i] - key[i] - 1) % n for i in range(len(text))]
+
