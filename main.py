@@ -64,4 +64,7 @@ def main():
             if len(keyIntArr) < len(textIntArr):
                 keyIntArr = enumerate_chars(key_resize(keyArr, len(textIntArr)))
 
+                #Encoding or Decoding the Message
 
+            code = coded(textIntArr, keyIntArr)
+            result = decharrify(denumerate(code))
