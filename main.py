@@ -71,4 +71,10 @@ def main():
 
                 #Displaying the Final Result
 
-            printf(f"{'Ciphertext' if action == 'e' else 'Plaintext'}: {result}")
+            print(f"{'Ciphertext' if action == 'e' else 'Plaintext'}: {result}")
+
+                #Handling User Exit Command
+
+        elif action == 'o':
+            print("Thanks for using!")
+            break
