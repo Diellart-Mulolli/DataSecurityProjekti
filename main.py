@@ -68,3 +68,7 @@ def main():
 
             code = coded(textIntArr, keyIntArr)
             result = decharrify(denumerate(code))
+
+                #Displaying the Final Result
+
+            printf(f"{'Ciphertext' if action == 'e' else 'Plaintext'}: {result}")
