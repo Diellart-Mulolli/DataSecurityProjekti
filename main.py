@@ -64,4 +64,25 @@ def main():
             if len(keyIntArr) < len(textIntArr):
                 keyIntArr = enumerate_chars(key_resize(keyArr, len(textIntArr)))
 
+                #Encoding or Decoding the Message
 
+            code = coded(textIntArr, keyIntArr)
+            result = decharrify(denumerate(code))
+
+                #Displaying the Final Result
+
+            print(f"{'Ciphertext' if action == 'e' else 'Plaintext'}: {result}")
+
+                #Handling User Exit Command
+
+        elif action == 'o':
+            print("Thanks for using!")
+            break
+
+            #Handling Invalid Commands and Program Entry Point Running
+
+        else:
+            print("ERROR INVALID COMMAND!!!")
+
+if __name__ == "__main__":
+            main()
