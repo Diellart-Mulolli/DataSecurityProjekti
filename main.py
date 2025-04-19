@@ -3,6 +3,10 @@ import string
 def uppercased(text):
     return text.upper()
 
+def charrify(text):
+alphabet = string.ascii_uppercase
+return [char for char in text if char in alphabet]
+
 def denumerate(indices):
     alphabet = string.ascii_uppercase
     return [alphabet[i] for i in indices]
