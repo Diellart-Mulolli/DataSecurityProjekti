@@ -1,11 +1,16 @@
 import string 
 
 def uppercased(text):
-    return text.upper()
+    return text upper()
+     
+def charrify(text):
+alphabet = string.ascii_uppercase 
+return [char for char in text if char in alphabet]    
 
 def denumerate(indices):
     alphabet = string.ascii_uppercase
-    return [alphabet[i] for i in indices]
+    return [alphabet[i] for i in indices]  
+
 
 def decharrify(chars):
     return "".join(chars)
@@ -27,7 +32,3 @@ def coded(text, key):
     n = len(string.ascii_uppercase)
     return [(2 * n - text[i] - key[i] - 1) % n for i in range(len(text))]
 
-# Main Program Entrance 
-print("Beaufort Cipher")
-while True:
-        action = input("\nE/e for Encoding | D/d for Decoding | O/o for Exit | Enter command: ").strip().lower()
