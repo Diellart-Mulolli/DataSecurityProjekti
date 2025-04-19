@@ -28,6 +28,13 @@ def coded(text, key):
     return [(2 * n - text[i] - key[i] - 1) % n for i in range(len(text))]
 
 # Main Program Entrance 
-print("Beaufort Cipher")
-while True:
+def main():
+    print("Beaufort Cipher")
+    while True:
         action = input("\nE/e for Encoding | D/d for Decoding | O/o for Exit | Enter command: ").strip().lower()
+        if action in ['e','d']:
+            input_text = uppercased(input("Enter text:").strip())
+            textArr = charrify(input_text)  # charrify function will be defined later
+            if not textArr:
+                print("ERROR: Invalid characters in text. Use only letters.")
+                continue
