@@ -7,6 +7,11 @@ def charrify(text):
 alphabet = string.ascii_uppercase
 return [char for char in text if char in alphabet]
 
+def enumerate_chars(chars):
+alphabet = string.ascii_uppercase
+return [alphabet.index(ch) for ch in chars]
+
+
 def denumerate(indices):
     alphabet = string.ascii_uppercase
     return [alphabet[i] for i in indices]
