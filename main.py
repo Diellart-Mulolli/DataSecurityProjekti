@@ -1,21 +1,25 @@
 import string 
 
+# f: string -> list of chars
 def uppercased(text):
     return text.upper()
 
+# f: string -> list of chars
 def charrify(text):
-alphabet = string.ascii_uppercase
-return [char for char in text if char in alphabet]
+    alphabet = string.ascii_uppercase
+    return [char for char in text if char in alphabet]
 
-def enumerate_chars(chars)
-alphabet = string.ascii_uppercase
-return [alphabet.index(ch) for ch in chars]
+# f: list of chars -> list of numbers
+def enumerate_chars(chars):
+    alphabet = string.ascii_uppercase
+    return [alphabet.index(ch) for ch in chars]
 
+# f: list of numbers -> list of chars
 def denumerate(indices):
     alphabet = string.ascii_uppercase
     return [alphabet[i] for i in indices]  
 
-
+# f: list of chars -> string 
 def decharrify(chars):
     return "".join(chars)
 
@@ -24,14 +28,12 @@ def decharrify(chars):
 # by repeating the key as many times as necessary and then slicing it to the correct size.
 # TEXTINPUT
 # KEYKEYLEY
-
 def key_resize(key, size):
     return (key * (size // len(key) + 1))[:size]
 
 # main function
 # This function takes a plaintext and a key, resizes the key, and then encodes the plaintext
 # using the coded function. It returns the encoded text as a string.
-
 def coded(text, key):
     n = len(string.ascii_uppercase)
     return [(2 * n - text[i] - key[i] - 1) % n for i in range(len(text))]
