@@ -29,3 +29,5 @@ def coded(text, key):
 
 # Main Program Entrance 
 print("Beaufort Cipher")
+while True:
+        action = input("\nE/e for Encoding | D/d for Decoding | O/o for Exit | Enter command: ").strip().lower()
