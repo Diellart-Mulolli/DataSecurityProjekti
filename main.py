@@ -27,6 +27,5 @@ def coded(text, key):
     n = len(string.ascii_uppercase)
     return [(2 * n - text[i] - key[i] - 1) % n for i in range(len(text))]
 
-
-
-
+# Main Program Entrance 
+print("Beaufort Cipher")
