@@ -15,3 +15,11 @@ def decharrify(chars):
 
 def key_resize(key, size):
     return (key * (size // len(key) + 1))[:size]
+
+# main function
+# This function takes a plaintext and a key, resizes the key, and then encodes the plaintext
+# using the coded function. It returns the encoded text as a string.
+
+def coded(text, key):
+    n = len(string.ascii_uppercase)
+    return [(2 * n - text[i] - key[i] - 1) % n for i in range(len(text))]
