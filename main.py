@@ -56,3 +56,12 @@ def main():
                 print("ERROR: Invalid characters in key. Use only letters.")
                 continue
             keyIntArr = enumerate_chars(keyArr)
+
+            #Encrytpion and Exit of the Program
+
+                #Resizing the Key to Match the Text Length
+
+            if len(keyIntArr) < len(textIntArr):
+                keyIntArr = enumerate_chars(key_resize(keyArr, len(textIntArr)))
+
+
