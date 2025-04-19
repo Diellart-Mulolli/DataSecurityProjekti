@@ -78,3 +78,11 @@ def main():
         elif action == 'o':
             print("Thanks for using!")
             break
+
+            #Handling Invalid Commands and Program Entry Point Running
+
+        else:
+            print("ERROR INVALID COMMAND!!!")
+
+        if __name__ == "__main__":
+            main()
