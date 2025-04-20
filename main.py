@@ -44,13 +44,13 @@ def main():
     while True:
         action = input("\nE/e for Encoding | D/d for Decoding | O/o for Exit | Enter command: ").strip().lower()
         if action in ['e','d']:
-            input_text = uppercased(input("Enter text:").strip())
+            input_text = uppercased(input("Enter text: ").strip())
             textArr = charrify(input_text)  # charrify function will be defined later
             if not textArr:
                 print("ERROR: Invalid characters in text. Use only letters.")
                 continue
             textIntArr = enumerate_chars(textArr) #enumerate_chars function also will be completed later by the colleague
-            input_key = uppercased(input("Enter key:").strip())
+            input_key = uppercased(input("Enter key: ").strip())
             keyArr = charrify(input_key)
             if not keyArr: 
                 print("ERROR: Invalid characters in key. Use only letters.")
@@ -63,5 +63,16 @@ def main():
 
             if len(keyIntArr) < len(textIntArr):
                 keyIntArr = enumerate_chars(key_resize(keyArr, len(textIntArr)))
+            code = coded(textIntArr, keyIntArr)
+            result = decharrify(denumerate(code))
+
+            print(f"{'Ciphertext' if action == 'e' else 'Plaintext'}: {result}")
+
+        elif action == 'o':
+            print("Thanks for using!")
+            break
+        else:
+            print("ERROR INVALID COMMAND!!!")
 
 
+main()
